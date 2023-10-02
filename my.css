@@ -2,7 +2,12 @@
     --back: rgb(250, 235, 215);
     --mainImg: url(static/headshot.JPG);
     --secColor: rgb(173, 216, 230);
+    --ExBullCover: #999;
 }
+
+/*
+All Animations
+*/
 
 @keyframes navhoverin{
     0% {color: var(--back); margin-left: 0vw;}
@@ -13,15 +18,72 @@
     100% {color: var(--back); margin-left: 0vw;}
 }
 
+/*
+All Classes
+*/
+
+.ExCircleMid {
+    position: relative;
+    border: 3px solid var(--ExBullCover);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-top: 15vh;
+    background-color: var(--ExBullCover);
+}
+
+.ExCircleMid:before {
+    position: absolute;
+    border: 1px solid var(--ExBullCover);
+    width: 0;
+    height: 25vh;
+    display: block;
+    content: '';
+    left: 50%;
+    margin-left: var(--ExBullCover);
+  }
+
+.Exh2 {
+    margin-top: -1vh;
+}
+
+.navitem{
+    border-bottom: 1px var(--back) solid;
+    animation-name: navhoverout;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    height: inherit;
+    font-size: 1.5em;
+    color: var(--back);
+}
+
+.navitem:hover{
+    animation-name: navhoverin;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    border-color: lightblue;
+    color: lightblue;
+    cursor: pointer;
+}
+
+/*
+All Tags
+*/
+
 body::-webkit-scrollbar {
     display: none;
 }
 
 body {
+    overflow-x: hidden;
     margin: 0;
     display: flex;
     flex-direction: row;
 }
+
+/*
+All IDs
+*/
 
 #nav-wrapper {
     height: 100vh;
@@ -52,27 +114,8 @@ body {
     margin-left: 1vw;
 }
 
-.navitem{
-    border-bottom: 1px var(--back) solid;
-    animation-name: navhoverout;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    height: inherit;
-    font-size: 1.5em;
-    color: var(--back);
-}
-
-.navitem:hover{
-    animation-name: navhoverin;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    border-color: lightblue;
-    color: lightblue;
-    cursor: pointer;
-}
-
 #main{
-    background-image: linear-gradient(to top right, var(--back),var(--secColor), var(--secColor), var(--secColor));
+    background-image: linear-gradient(to top right, var(--back), var(--back), var(--secColor), var(--secColor), var(--secColor));
     width: 100%;
     height: inherit;
     display: flex;
@@ -143,5 +186,104 @@ body {
 #ExperienceWrapper{
     height: 100vh;
     width: 100%;
-    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: linear-gradient(to right, var(--back), var(--secColor), var(--secColor));
+}
+
+
+#Experience{
+    margin-left: 10%;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ExperienceContent{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#BulletContainer{
+    width: 3vw;
+    height: inherit;
+}
+
+#ExCircleTop {
+    position: relative;
+    border: 3px solid var(--ExBullCover);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    background-color: var(--ExBullCover);
+}
+
+#ExCircleTop:before {
+    position: absolute;
+    border: 1px solid var(--ExBullCover);
+    width: 0;
+    height: 25vh;
+    display: block;
+    content: '';
+    left: 50%;
+    margin-left: var(--ExBullCover);
+}
+
+#ExCircleBot{
+    position: relative;
+    border: 3px solid var(--ExBullCover);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-top: 15vh;
+    background-color: var(--ExBullCover);
+}
+
+#ExDesc{
+    margin-left: 2vw;
+}
+
+#ExImgs{
+    margin-left: 2vw;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#SPProImg{
+    background: url(static/SPPro.jpg);
+    height: 20vh;
+    width: 20vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110%;
+    border-radius: 50%;
+}
+
+#SBImg {
+    margin-top: -3vh;
+    background-image: url(static/SB.png);
+    height: 20vh;
+    width: 20vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+}
+
+#SageImg{
+    background: url(static/Sage.jpg);
+    height: 20vh;
+    width: 20vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110%;
+    border-radius: 50%;
 }
