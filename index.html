@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!--
+To Do:
+ 1. Add the right pictures to the grid
+ 2. Add JS functions
+ 3. Finish the Contact Section
+-->
 <html>
     <head>
         <title>Brendan's Site</title>
@@ -6,18 +12,22 @@
         <meta charset="UTF-8" name="Brendan's Website" content="Brendans Online Resume"/>
     </head>
     <body>
+        <!--Aside Nav Bar-->
         <div id="nav-wrapper">
             <div id="nav">
                 <div id="navimg"></div>
                 <div id="navitems">
-                    <h3 class="navitem" id="navAb">About</h3>
-                    <h3 class="navitem" id="navEx">Experience</h3>
-                    <h3 class="navitem" id="navRe">Resume</h3>
-                    <h3 class="navitem" id="navCo">Contact</h3>
+                    <canvas id="screentrack" width="1" height="1"></canvas>
+                    <a href="#AboutWrapper"><h3 class="navitem" id="navAb">About</h3></a>
+                    <a href="#Experience"><h3 class="navitem" id="navEx">Experience</h3></a>
+                    <a href="#Resume"><h3 class="navitem" id="navRe">Resume</h3></a>
+                    <a href="#Contact"><h3 class="navitem" id="navCo">Contact</h3></a>
                 </div>
             </div>
         </div>
+        <!--Main Part of Site-->
         <div id="main">
+            <!--About Section-->
             <div id="AboutWrapper">
                 <div id="title"><h1>I'm Brendan Drager</h1></div>
                 <div id="About">
@@ -32,13 +42,14 @@
                     <h3>&emsp;At Beloit College, I have had the opportunity to take many courses to improve and develop new skills. Through my computer science courses and side projects I am always improving my development skills in Python, Java, HTML, CSS, JavaScript, SQL, and PHP. In my Algroithm Design and Analysis class, I learned about the different kinds of algorithms that you can use to store memory, retrieve memory, and improve run time. My business economics courses are also always helping me to improve my presentation and communication skills. My class, Introduction to Entrepreneurship, required lots of communicating and presenting on how our business was doing.</h3>
                 </div>
             </div>
+            <!--Experience Section-->
             <div id="ExperienceWrapper">
                 <div id="Experience">
-                    <h1 style="align-self: center;">My Experience</h1>
+                    <h1 class="center">My Experience</h1>
                     <div id="ExperienceContent">
                         <div id="BulletContainer">
                             <div id="ExCircleTop"></div>
-                            <div class="ExCircleMid"></div>
+                            <div id="ExCircleMid"></div>
                             <div id="ExCircleBot"></div>
                         </div>
                         <div id="ExDesc">
@@ -64,17 +75,56 @@
                                 <li>Assisted with financial documents</li>
                             </ul>
                         </div>
-                        <div id="ExImgs">
-                            <div id="SPProImg"></div>
-                            <h3>June 2023 - Sep 2023</h3>
-                            <div id="SBImg"></div>
-                            <h3 style="margin-top: -2vh;">May 2022 - Aug 2023</h3>
-                            <div id="SageImg"></div>
-                            <h3>May 2020 - Nov 2021</h3>
+                        <div id="ExDates">
+                            <h2>June 2023 - Sep 2023</h2>
+                            <h2>May 2022 - Aug 2023</h2>
+                            <h2>May 2020 - Nov 2021</h2>
                         </div>
                     </div>
                 </div> 
             </div>
+            <!--Resume Section-->
+            <div id="ResumeWrapper">
+                <div id="Resume">
+                    <h1 class="center">My Resume</h1>
+                    <div id="ResContent">
+                        <iframe src="static/Website Res.pdf" height="95%" width="50%"></iframe>
+                        <div id="ResHighlightsWrapper">
+                            <div id="ResHighlights">
+                                <h1 class="center">Highlights</h1>
+                                <div id="HighlightGrid">
+                                    <div id="SPProGrid" onmouseover="textchange(1), gridIconHover()" onmouseout="textchange(7), gridIconHover()"></div>
+                                    <div id="BeloitGrid" onmouseover="textchange(2), gridIconHover()" onmouseout="textchange(7), gridIconHover()"></div>
+                                    <div id="GoogleDevClub" onmouseover="textchange(3), gridIconHover()" onmouseout="textchange(7), gridIconHover()"></div>
+                                    <div id="InvestmentClub" onmouseover="textchange(4), gridIconHover()" onmouseout="textchange(7), gridIconHover()"></div>
+                                    <div id="Languages" onmouseover="textchange(5), gridIconHover()" onmouseout="textchange(7), gridIconHover()"></div>
+                                    <div id="PersonalProjects" onmouseover="textchange(6), gridIconHover()" onmouseout="textchange(7), gridIconHover()"></div>
+                                </div>
+                                <div id="GridDesc">
+                                    <h3 id="ChangingText">Hover over one of the images in the grid above to get a description.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Contact Section-->
+            <div id="ContactWrapper">
+                <div id="Contact">
+                    <h1 class="center">Contact Me</h1>
+                    <div id="ContactContent">
+                        <div id="EmailMe">
+                            <h2 class="center">Email Me</h2>
+                            <form id="EmailContent" accept-charset="UTF-8" autocomplete="on">
+                                <label for="emailsubject">Message Subject:</label>
+                                <input type="text" id="emailsubject" name="emailsubject" placeholder="Subject">
+                                <label for="emailcontent">Message Body:</label>
+                                <textarea id="emailcontent" name="emailcontent" placeholder="Message"></textarea>
+                                <input type="submit" id="formsubmit" name="formsubmit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

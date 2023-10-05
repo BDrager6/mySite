@@ -17,31 +17,18 @@ All Animations
     0% {color: var(--secColor); margin-left: 1.5vw;}
     100% {color: var(--back); margin-left: 0vw;}
 }
+@keyframes gridhoverin{
+    0% {height: 100%; width: 100%;}
+    100% {height: 145%; width: 145%; margin-left: -20%;}
+}
+@keyframes gridhoverout{
+    0% {height: 145%; width: 145%; margin-left: -20%;}
+    100%{height: 100%; width: 100%; margin-left: 0%;}
+}
 
 /*
 All Classes
 */
-
-.ExCircleMid {
-    position: relative;
-    border: 3px solid var(--ExBullCover);
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    margin-top: 15vh;
-    background-color: var(--ExBullCover);
-}
-
-.ExCircleMid:before {
-    position: absolute;
-    border: 1px solid var(--ExBullCover);
-    width: 0;
-    height: 25vh;
-    display: block;
-    content: '';
-    left: 50%;
-    margin-left: var(--ExBullCover);
-  }
 
 .Exh2 {
     margin-top: -1vh;
@@ -66,23 +53,47 @@ All Classes
     cursor: pointer;
 }
 
+.center{
+    align-self: center;
+}
+
 /*
 All Tags
 */
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar{
     display: none;
 }
 
-body {
+body{
     overflow-x: hidden;
     margin: 0;
     display: flex;
     flex-direction: row;
 }
 
+a{
+    text-decoration: none;
+    color: none;
+}
+
+
+a:visited{
+    text-decoration: none;
+    color: var(--back);
+}
+
+a:visited:hover{
+    text-decoration: none;
+    color: var(--secColor);
+}
+
 /*
 All IDs
+*/
+
+/*
+    Nav Section
 */
 
 #nav-wrapper {
@@ -122,6 +133,10 @@ All IDs
     flex-direction: column;
     justify-content: space-around;
 }
+
+/*
+    About Section
+*/
 
 #AboutWrapper{
     display: flex;
@@ -183,13 +198,17 @@ All IDs
  width: 70%;
 }
 
+/*
+    Experience Section
+*/
+
 #ExperienceWrapper{
+    margin-left: -3%;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-image: linear-gradient(to right, var(--back), var(--secColor), var(--secColor));
 }
 
 
@@ -211,79 +230,277 @@ All IDs
 }
 
 #BulletContainer{
-    width: 3vw;
+    width: 13%;
     height: inherit;
 }
 
 #ExCircleTop {
+    background-image: url(static/SPPro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
     position: relative;
-    border: 3px solid var(--ExBullCover);
     border-radius: 100%;
-    width: 50px;
-    height: 50px;
     margin-top: 20px;
-    background-color: var(--ExBullCover);
+    height: 20vh;
+    width: 20vh;
 }
 
 #ExCircleTop:before {
     position: absolute;
     border: 1px solid var(--ExBullCover);
     width: 0;
-    height: 25vh;
+    height: 7.5vh;
     display: block;
+    top: 20vh;
     content: '';
     left: 50%;
     margin-left: var(--ExBullCover);
 }
 
-#ExCircleBot{
+#ExCircleMid {
     position: relative;
-    border: 3px solid var(--ExBullCover);
     border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    margin-top: 15vh;
-    background-color: var(--ExBullCover);
-}
-
-#ExDesc{
-    margin-left: 2vw;
-}
-
-#ExImgs{
-    margin-left: 2vw;
-    width: 20vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-#SPProImg{
-    background: url(static/SPPro.jpg);
+    margin-top: 5vh;
+    background-image: url(static/SB.png);
+    border-radius: 100%;
     height: 20vh;
     width: 20vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 110%;
-    border-radius: 50%;
 }
 
-#SBImg {
-    margin-top: -3vh;
-    background-image: url(static/SB.png);
-    height: 20vh;
-    width: 20vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 120%;
-}
+#ExCircleMid:before {
+    top: 17vh;
+    position: absolute;
+    border: 1px solid var(--ExBullCover);
+    width: 0;
+    height: 5vh;
+    display: block;
+    content: '';
+    left: 50%;
+    margin-left: var(--ExBullCover);
+  }
 
-#SageImg{
+#ExCircleBot{
+    margin-top: 2vh;
+    position: relative;
+    border-radius: 100%;
     background: url(static/Sage.jpg);
     height: 20vh;
     width: 20vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 110%;
-    border-radius: 50%;
+}
+
+#ExDesc{
+    margin-left: 2vw;
+}
+
+#ExDates{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*
+    Resume Section
+*/
+
+#ResumeWrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#Resume{
+    margin-left: 10vw;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ResContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#ResHighlightsWrapper{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#ResHighlights{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*
+    Resume Grid Section
+*/
+
+#HighlightGrid{
+    display: grid;
+    gap: 2vw;
+    height: 30%;
+    width: 100%;
+}
+
+#HighlightGrid > div{
+    animation-name: gridhoverout;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#HighlightGrid > div:hover{
+    animation-name: gridhoverin;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+}
+
+#SPProGrid{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    background-image: url(static/SPPro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+#BeloitGrid{
+    grid-row: 1;
+    grid-column-start: 2;
+    background-image: url(static/Beloit.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+#GoogleDevClub{
+    grid-row: 1;
+    grid-column-start: 3;
+    background-image: url('static/Google Dev Club.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+#InvestmentClub{
+    grid-row-start: 2;
+    grid-column: 1;
+    background-image: url(static/Stock.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+#Languages{
+    grid-row: 2;
+    grid-column: 2;
+    background-image: url(static/Languages.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+#PersonalProjects{
+    grid-row: 2;
+    grid-column: 3;
+    background-image: url(static/Coding.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+#GridDesc{
+    text-align: center;
+    height: 15vh;
+}
+
+/*
+    Contact Section
+*/
+
+#ContactWrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#Contact{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ContactContent{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#EmailMe{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#EmailContent{
+    display: flex;
+    flex-direction: column;
+}
+
+#EmailContent > label{
+    margin-top: 5vh;
+}
+
+#emailsubject{
+    width: 50%;
+}
+
+
+#emailcontent{
+    width: 75%;
+    height: 30vh;
+}
+
+#formsubmit{
+    width: 25%;
+    cursor: pointer;
+    margin-top: 5vh;
 }
