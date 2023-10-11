@@ -48,13 +48,23 @@ All Classes
     animation-name: navhoverin;
     animation-duration: .5s;
     animation-fill-mode: forwards;
-    border-color: lightblue;
-    color: lightblue;
+    border-color: var(--secColor);
+    color: var(--secColor);
     cursor: pointer;
 }
 
 .center{
     align-self: center;
+}
+
+.preload{
+    animation-name: none !important;
+}
+
+.active{
+    color: var(--secColor) !important;
+    margin-left: 1.5vw !important;
+    border-color: var(--secColor);
 }
 
 /*
@@ -87,6 +97,10 @@ a:visited:hover{
     text-decoration: none;
     color: var(--secColor);
 }
+
+h1, h2, h3{cursor: default;}
+
+li{cursor: default;}
 
 /*
 All IDs
@@ -465,6 +479,7 @@ All IDs
 }
 
 #ContactContent{
+    margin-left: 15vw;
     width: 80%;
     height: 80%;
     display: flex;
@@ -503,4 +518,14 @@ All IDs
     width: 25%;
     cursor: pointer;
     margin-top: 5vh;
+}
+
+#ContactImg{
+    background-image: url("static/BeloitSoccer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    height: 90%;
+    width: 40%;
+    border-radius: 20%;
 }

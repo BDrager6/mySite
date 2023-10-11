@@ -1,4 +1,9 @@
 const changing = document.getElementById("ChangingText");
+const winHeight = window.innerHeight;
+const navAb = document.getElementById("navAb");
+const navEx = document.getElementById("navEx");
+const navRe = document.getElementById("navRe");
+const navCo = document.getElementById("navCo");
 var DisplayText = '';
 const baseText = "Hover over one of the images in the grid above to get a description.";
 const SPProText = "During the summer I was a software engineering intern with Service Point Pro.";
@@ -8,9 +13,9 @@ const InvestText = "I am in the Investment Club at school and have my own invest
 const LanguageText = "I know Java, Python, HTML, PHP, CSS, JavaScript, SQL, and have started to learn C#.";
 const PersonalText = "I have built generative AI assitants, helped kids learn to code, and built this website from scratch.";
 var fadeout = true;
-const test = document.getElementById('screentrack');
-var height = test.getBoundingClientRect();
-console.log(height.top)
+//Check to see if AboutHeight.top is within window but have to recheck window height for different computers when window loads
+//CHekc if we are within x*y where x is the section that you are on and y is the viewport height
+//If true then add class and active class to that part of the nav
 
 function textchange(x){
     if(x==1){
@@ -68,4 +73,13 @@ function None(){
     changing.innerHTML = DisplayText;
     fadeout = false;
     Quarter();
+}
+
+function addAnimation(){
+     const animated = document.getElementsByClassName('preload');
+     console.log(animated.length);
+     for(var i=0;i<animated.length;i++){
+        console.log('Testing');
+        animated[i].classList.remove("preload");
+     }
 }
