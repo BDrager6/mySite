@@ -80,6 +80,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: row;
+    font-family: 'Inter', sans-serif;
 }
 
 a{
@@ -565,4 +566,11 @@ All IDs
     background-color: rgba(50, 50, 50, .5);
     border-top-left-radius: 20%;
     border-bottom-left-radius: 20%;
+}
+
+#InterestTitle{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
