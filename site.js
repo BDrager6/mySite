@@ -13,6 +13,7 @@ const InvestText = "I am in the Investment Club at school and have my own invest
 const LanguageText = "I know Java, Python, HTML, PHP, CSS, JavaScript, SQL, and have started to learn C#.";
 const PersonalText = "I have built generative AI assitants, helped kids learn to code, and built this website from scratch.";
 var fadeout = true;
+var x = 0;
 //Check to see if AboutHeight.top is within window but have to recheck window height for different computers when window loads
 //CHekc if we are within x*y where x is the section that you are on and y is the viewport height
 //If true then add class and active class to that part of the nav
@@ -82,4 +83,40 @@ function addAnimation(){
         console.log('Testing');
         animated[i].classList.remove("preload");
      }
+}
+
+function NextSlide(){
+    if(x==5){
+        x = 0;
+    } else {
+        x = x+1;
+    }
+    slideshow(x);
+}
+function PrevSlide(){
+    if(x==0){
+        x = 4;
+    } else {
+        x = x-1;
+    }
+    slideshow(x-1);
+}
+
+function slideshow(y){
+    const slideshow = document.getElementById("ContactImg");
+    if(y==0){
+        slideshow.style.backgroundImage = "url('static/BeloitSoccer.jpg')";
+    }
+    else if(y==1){
+        slideshow.style.backgroundImage = "url('static/Skiing.jpg')";
+    }
+    else if(y==2){
+        slideshow.style.backgroundImage = "url('static/SkiingFreinds.jpg')";
+    }
+    else if(y==3){
+        slideshow.style.backgroundImage = "url('static/RockDrop.jpg')";
+    }
+    else if(y==4){
+        slideshow.style.backgroundImage = "url('static/Ball.jpg')";
+    }
 }

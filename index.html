@@ -3,6 +3,7 @@
     <head>
         <title>Brendan's Site</title>
         <link rel="stylesheet" href="my.css"/>
+        <script src="https://kit.fontawesome.com/72f3e4032a.js" crossorigin="anonymous"></script>
         <meta charset="UTF-8" name="Brendan's Website" content="Brendans Online Resume"/>
     </head>
     <body >
@@ -104,7 +105,7 @@
             <!--Contact Section-->
             <div id="ContactWrapper">
                 <div id="Contact">
-                    <h1 class="center">Contact Me</h1>
+                    <h1 class="center">Extra</h1>
                     <div id="ContactContent">
                         <div id="EmailMe">
                             <h2 class="center">Email Me</h2>
@@ -116,7 +117,15 @@
                                 <input type="submit" id="formsubmit" name="formsubmit" value="Submit">
                             </form>
                         </div>
-                        <div id="ContactImg"></div>
+                        <div id="InterestHolder">
+                            <h1 class="center">My Interests</h1>
+                            <div id="ContactImg">
+                                <div id="SlideArrows">
+                                    <div class="SlideArrow" id="Prev"  onclick="PrevSlide()"><i class="fa fa-solid fa-chevron-down fa-rotate-90 fa-2x" style="color: yellow;"></i></div>
+                                    <div class="SlideArrow" id="Next" onclick="NextSlide()"><i class="fa fa-solid fa-chevron-down fa-rotate-270 fa-2x" style="color: yellow;"></i></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
