@@ -18,12 +18,12 @@ function ActiveAside(){
         navEx.classList.remove("navitemactive");
         navRe.classList.remove("navitemactive");
         navCo.classList.remove("navitemactive");
-    } else if (expheight < (winHeight*.66) && expheight > 0){
+    } else if (expheight < (winHeight*.66) && expheight > -(winHeight*.33)){
         navAb.classList.remove("navitemactive");
         navEx.classList.add("navitemactive");
         navRe.classList.remove("navitemactive");
         navCo.classList.remove("navitemactive");
-    } else if (resheight < (winHeight*.66) && resheight > 0){
+    } else if (resheight < (winHeight*.66) && resheight > -(winHeight*.33)){
         navAb.classList.remove("navitemactive");
         navEx.classList.remove("navitemactive");
         navRe.classList.add("navitemactive");
@@ -34,7 +34,6 @@ function ActiveAside(){
         navRe.classList.remove("navitemactive");
         navCo.classList.add("navitemactive");
     }
-    console.log("test");
 }
 
 //Next/Prev slideshow image
@@ -68,4 +67,4 @@ function slideshow(y){
     }
 }
 
-//setInterval(ActiveAside, 500);
+setInterval(ActiveAside, 200);
