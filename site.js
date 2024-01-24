@@ -68,4 +68,4 @@ function slideshow(y){
     }
 }
 
-setInterval(ActiveAside, 500);
+//setInterval(ActiveAside, 500);
