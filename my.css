@@ -344,7 +344,7 @@ li{cursor: default;}
 #HighlightGrid{
     display: grid;
     gap: 2vw;
-    height: 30%;
+    height: 60%;
     width: 100%;
 }
 
@@ -366,6 +366,14 @@ li{cursor: default;}
     margin-left: -20%;
 }
 
+#SPProGrid:hover ~ #GridDesc h3 {
+    color: rgba(0, 0, 0, 0);
+}
+
+#SPProGrid:hover ~ #SPProText {
+    color: rgba(0, 0, 0, 1);
+}
+
 #BeloitGrid{
     grid-row: 1;
     grid-column-start: 2;
@@ -382,6 +390,14 @@ li{cursor: default;}
     height: 145%;
     width: 145%;
     margin-left: -20%;
+}
+
+#BeloitGrid:hover ~ #GridDesc h3 {
+    color: rgba(0, 0, 0, 0);
+}
+
+#BeloitGrid:hover ~ #BeloitText {
+    color: rgba(0, 0, 0, 1);
 }
 
 #GoogleDevClub{
@@ -402,6 +418,14 @@ li{cursor: default;}
     margin-left: -20%;
 }
 
+#GoogleDevClub:hover ~ #GridDesc h3 {
+    color: rgba(0, 0, 0, 0);
+}
+
+#GoogleDevClub:hover ~ #GoogleDevClubText {
+    color: rgba(0, 0, 0, 1);
+}
+
 #InvestmentClub{
     grid-row-start: 2;
     grid-column: 1;
@@ -418,6 +442,14 @@ li{cursor: default;}
     height: 145%;
     width: 145%;
     margin-left: -20%;
+}
+
+#InvestmentClub:hover ~ #GridDesc h3 {
+    color: rgba(0, 0, 0, 0);
+}
+
+#InvestmentClub:hover ~ #InvestmentClubText {
+    color: rgba(0, 0, 0, 1);
 }
 
 #Languages{
@@ -438,6 +470,14 @@ li{cursor: default;}
     margin-left: -20%;
 }
 
+#Languages:hover ~ #GridDesc h3 {
+    color: rgba(0, 0, 0, 0);
+}
+
+#Languages:hover ~ #LanguagesText {
+    color: rgba(0, 0, 0, 1);
+}
+
 #PersonalProjects{
     grid-row: 2;
     grid-column: 3;
@@ -456,9 +496,78 @@ li{cursor: default;}
     margin-left: -20%;
 }
 
+#PersonalProjects:hover ~ #GridDesc h3 {
+    color: rgba(0, 0, 0, 0);
+}
+
+#PersonalProjects:hover ~ #PersonalProjectsText {
+    color: rgba(0, 0, 0, 1);
+}
+
 #GridDesc{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
     text-align: center;
     height: 15vh;
+}
+
+#GridDesc h3{
+    transition: color .75s;
+}
+
+#SPProText {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: rgba(0, 0, 0, 0);
+    text-align: center;
+    transition: color .75s;
+}
+
+#BeloitText {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: rgba(0, 0, 0, 0);
+    text-align: center;
+    transition: color .75s;
+}
+
+#GoogleDevClubText {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: rgba(0, 0, 0, 0);
+    text-align: center;
+    transition: color .75s;
+}
+
+#InvestmentClubText {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: rgba(0, 0, 0, 0);
+    text-align: center;
+    transition: color .75s;
+}
+
+#LanguagesText {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: rgba(0, 0, 0, 0);
+    text-align: center;
+    transition: color .75s;
+}
+
+#PersonalProjectsText {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: rgba(0, 0, 0, 0);
+    text-align: center;
+    transition: color .75s;
 }
 
 /*
