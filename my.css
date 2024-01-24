@@ -183,8 +183,8 @@ li{cursor: default;}
 }
 
 #AboutDesc{
-    height: inherit;
     width: 110%;
+    height: inherit;
     display: flex;
     flex-direction: row;
     justify-content: center;

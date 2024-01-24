@@ -1,8 +1,10 @@
+const changing = document.getElementById("ChangingText");
 const winHeight = window.innerHeight;
 const navAb = document.getElementById("navAb");
 const navEx = document.getElementById("navEx");
 const navRe = document.getElementById("navRe");
 const navCo = document.getElementById("navCo");
+var fadeout = true;
 var x = 0;
 
 //window.scrollY
