@@ -14,10 +14,17 @@ const LanguageText = "I know Java, Python, HTML, PHP, CSS, JavaScript, SQL, and 
 const PersonalText = "I have built generative AI assitants, helped kids learn to code, and built this website from scratch.";
 var fadeout = true;
 var x = 0;
-//Check to see if AboutHeight.top is within window but have to recheck window height for different computers when window loads
-//CHekc if we are within x*y where x is the section that you are on and y is the viewport height
-//If true then add class and active class to that part of the nav
 
+
+function ChangeAnimation(){
+    //Change animation duration to 1s
+    const HoverAnimat = document.querySelectorAll(".navitem");
+    for(var i=0;HoverAnimat.length;i++){
+       HoverAnimat[i].style.animationDuration = "1s";
+    }
+}
+
+//Change the text of the Icon Grid
 function textchange(x){
     if(x==1){
         DisplayText = SPProText;
@@ -43,6 +50,7 @@ function textchange(x){
     }
 }
 
+//Grid text fade out and in
 function gridIconHover(){
     changing.style.color = "rgba(0,0,0,.75)";
     if (fadeout){
@@ -58,6 +66,7 @@ function Half(){
     if (fadeout){
         setTimeout(Quarter, 125);
     } else {
+        fadeout = false;
         setTimeout(gridIconHover, 125);
     }
 }
@@ -76,30 +85,16 @@ function None(){
     Quarter();
 }
 
-function addAnimation(){
-     const animated = document.getElementsByClassName('preload');
-     console.log(animated.length);
-     for(var i=0;i<animated.length;i++){
-        console.log('Testing');
-        animated[i].classList.remove("preload");
-     }
-}
-
+//Next/Prev slideshow image
 function NextSlide(){
-    if(x==5){
-        x = 0;
-    } else {
-        x = x+1;
-    }
+    x = (x+1)%5
     slideshow(x);
 }
 function PrevSlide(){
     if(x==0){
-        x = 4;
-    } else {
-        x = x-1;
+        x = 5;
     }
-    slideshow(x-1);
+    slideshow(--x);
 }
 
 function slideshow(y){

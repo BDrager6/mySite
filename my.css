@@ -6,27 +6,6 @@
 }
 
 /*
-All Animations
-*/
-
-@keyframes navhoverin{
-    0% {color: var(--back); margin-left: 0vw;}
-    100% {color: var(--secColor); margin-left: 1.5vw;}
-}
-@keyframes navhoverout{
-    0% {color: var(--secColor); margin-left: 1.5vw;}
-    100% {color: var(--back); margin-left: 0vw;}
-}
-@keyframes gridhoverin{
-    0% {height: 100%; width: 100%;}
-    100% {height: 145%; width: 145%; margin-left: -20%;}
-}
-@keyframes gridhoverout{
-    0% {height: 145%; width: 145%; margin-left: -20%;}
-    100%{height: 100%; width: 100%; margin-left: 0%;}
-}
-
-/*
 All Classes
 */
 
@@ -36,18 +15,15 @@ All Classes
 
 .navitem{
     border-bottom: 1px var(--back) solid;
-    animation-name: navhoverout;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
     height: inherit;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: var(--back);
+    transition: color 1s, margin-left 1s, border-color 1s;
 }
 
 .navitem:hover{
-    animation-name: navhoverin;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
+    color: var(--secColor);
+    margin-left: 1.5vw;
     border-color: var(--secColor);
     color: var(--secColor);
     cursor: pointer;
@@ -102,10 +78,6 @@ a:visited:hover{
 h1, h2, h3{cursor: default;}
 
 li{cursor: default;}
-
-/*
-All IDs
-*/
 
 /*
     Nav Section
@@ -226,7 +198,6 @@ All IDs
     flex-direction: row;
     justify-content: center;
 }
-
 
 #Experience{
     margin-left: 10%;
@@ -377,18 +348,6 @@ All IDs
     width: 100%;
 }
 
-#HighlightGrid > div{
-    animation-name: gridhoverout;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-#HighlightGrid > div:hover{
-    animation-name: gridhoverin;
-    animation-duration: .75s;
-    animation-fill-mode: forwards;
-}
-
 #SPProGrid{
     grid-row-start: 1;
     grid-column-start: 1;
@@ -398,6 +357,13 @@ All IDs
     background-size: 100%;
     height: 100%;
     width: 100%;
+    transition: height .75s, width .75s, margin-left .75s;
+}
+
+#SPProGrid:hover {
+    height: 145%;
+    width: 145%;
+    margin-left: -20%;
 }
 
 #BeloitGrid{
@@ -409,6 +375,13 @@ All IDs
     background-size: 100%;
     height: 100%;
     width: 100%;
+    transition: height .75s, width .75s, margin-left .75s;
+}
+
+#BeloitGrid:hover {
+    height: 145%;
+    width: 145%;
+    margin-left: -20%;
 }
 
 #GoogleDevClub{
@@ -420,6 +393,13 @@ All IDs
     background-size: 100%;
     height: 100%;
     width: 100%;
+    transition: height .75s, width .75s, margin-left .75s;
+}
+
+#GoogleDevClub:hover {
+    height: 145%;
+    width: 145%;
+    margin-left: -20%;
 }
 
 #InvestmentClub{
@@ -431,6 +411,13 @@ All IDs
     background-size: 100%;
     height: 100%;
     width: 100%;
+    transition: height .75s, width .75s, margin-left .75s;
+}
+
+#InvestmentClub:hover {
+    height: 145%;
+    width: 145%;
+    margin-left: -20%;
 }
 
 #Languages{
@@ -442,6 +429,13 @@ All IDs
     background-size: 100%;
     height: 100%;
     width: 100%;
+    transition: height .75s, width .75s, margin-left .75s;
+}
+
+#Languages:hover {
+    height: 145%;
+    width: 145%;
+    margin-left: -20%;
 }
 
 #PersonalProjects{
@@ -453,6 +447,13 @@ All IDs
     background-size: 100%;
     height: 100%;
     width: 100%;
+    transition: height .75s, width .75s, margin-left .75s;
+}
+
+#PersonalProjects:hover {
+    height: 145%;
+    width: 145%;
+    margin-left: -20%;
 }
 
 #GridDesc{
