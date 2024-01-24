@@ -5,6 +5,36 @@ const navRe = document.getElementById("navRe");
 const navCo = document.getElementById("navCo");
 var x = 0;
 
+//window.scrollY
+//console.log(expheight);
+function ActiveAside(){
+    var expheight = document.getElementById("Experience").getBoundingClientRect().top;
+    var resheight = document.getElementById("Resume").getBoundingClientRect().top;
+    var conheight = document.getElementById("Contact").getBoundingClientRect().top;
+    if(expheight > (winHeight*.66)){
+        navAb.classList.add("navitemactive");
+        navEx.classList.remove("navitemactive");
+        navRe.classList.remove("navitemactive");
+        navCo.classList.remove("navitemactive");
+    } else if (expheight < (winHeight*.66) && expheight > 0){
+        navAb.classList.remove("navitemactive");
+        navEx.classList.add("navitemactive");
+        navRe.classList.remove("navitemactive");
+        navCo.classList.remove("navitemactive");
+    } else if (resheight < (winHeight*.66) && resheight > 0){
+        navAb.classList.remove("navitemactive");
+        navEx.classList.remove("navitemactive");
+        navRe.classList.add("navitemactive");
+        navCo.classList.remove("navitemactive");
+    } else if (conheight < (winHeight*.66)){
+        navAb.classList.remove("navitemactive");
+        navEx.classList.remove("navitemactive");
+        navRe.classList.remove("navitemactive");
+        navCo.classList.add("navitemactive");
+    }
+    console.log("test");
+}
+
 //Next/Prev slideshow image
 function NextSlide(){
     x = (x+1)%5
@@ -35,3 +65,5 @@ function slideshow(y){
         slideshow.style.backgroundImage = "url('static/Ball.jpg')";
     }
 }
+
+setInterval(ActiveAside, 500);

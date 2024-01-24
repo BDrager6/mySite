@@ -25,7 +25,15 @@ All Classes
     color: var(--secColor);
     margin-left: 1.5vw;
     border-color: var(--secColor);
+    cursor: pointer;
+}
+
+.navitemactive{
+    height: inherit;
+    font-size: 1.4em;
     color: var(--secColor);
+    margin-left: 1.5vw;
+    border-color: var(--secColor);
     cursor: pointer;
 }
 
